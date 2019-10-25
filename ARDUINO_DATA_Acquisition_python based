@@ -1,0 +1,24 @@
+  #arduino  uploud the code 
+int analogPin = A0;     
+int data = 0; 
+char userInput;          
+
+void setup(){
+
+  Serial.begin(9600);          //  setup serial
+
+}
+
+void loop(){
+
+
+      data = analogRead(analogPin);    // read the input pin
+     // Serial.println(data);
+       float sensorValue = analogRead(A0);
+  // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+  float voltage = sensorValue * (5.0 / 1023.0);
+  Serial.println(voltage);
+  //Serial.println(millis());
+      delay(40);
+
+} // Void Loop
